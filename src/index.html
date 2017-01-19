@@ -9,7 +9,7 @@
       }
 
       div#board {
-        position: relative;
+        position: absolute;
         width: 1024px;
         height: 863px;
         margin: auto;
@@ -39,64 +39,113 @@
         border-color: rgb(83, 175, 19);
         font-size: 1em;
       }
-      table {
+      table#1 {
         border-spacing: 0px;
         position: absolute;
         left: 173px;
         top: 98px;
       }
       td {
-        width: 94px;
-        height: 94px;
+        width: 50px;
+        height: 50px;
         border: 1px solid #000000;
+      }
+      table tr:first-child td, table tr td:first-child {
+        border: 0px solid white;
       }
   </style>
   </head>
   <body>
     <div id="board">
-       <div id="messageArea"></div>
-       <table>
+       <div id="messageArea"/>
+       <table id="1">
          <tr>
-           <td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td> 
-           <td id="06"></td><td id="07"></td><td id="08"></td><td id="09"></td><td id="10"></td>
+           <td id="01"></td><td id="02">A</td><td id="03">B</td><td id="04">C</td><td id="05">D</td> 
+           <td id="06">E</td><td id="07">F</td><td id="08">G</td><td id="09">H</td><td id="10">I</td><td id="300">J</td>
          </tr>
          <tr>
-           <td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td> 
-           <td id="16"></td><td id="17"></td><td id="18"></td><td id="19"></td><td id="20"></td>
+           <td id="11">1</td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td> 
+           <td id="16"></td><td id="17"></td><td id="18"></td><td id="19"></td><td id="20"></td><td id="301"></td>
          </tr>
          <tr>
-           <td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td> 
-           <td id="26"></td><td id="27"></td><td id="28"></td><td id="29"></td><td id="30"></td>
+           <td id="21">2</td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td> 
+           <td id="26"></td><td id="27"></td><td id="28"></td><td id="29"></td><td id="30"></td><td id="302"></td>
          </tr>
          <tr>
-           <td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td> 
-           <td id="36"></td><td id="37"></td><td id="38"></td><td id="39"></td><td id="40"></td>
+           <td id="31">3</td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td>
+           <td id="36"></td><td id="37"></td><td id="38"></td><td id="39"></td><td id="40"></td><td id="303"></td>
          </tr>
          <tr>
-           <td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td> 
-           <td id="46"></td><td id="47"></td><td id="48"></td><td id="49"></td><td id="50"></td>
+           <td id="41">4</td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td> 
+           <td id="46"></td><td id="47"></td><td id="48"></td><td id="49"></td><td id="50"></td><td id="304"></td>
          </tr>
          <tr>
-           <td id="51"></td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td> 
-           <td id="56"></td><td id="57"></td><td id="58"></td><td id="59"></td><td id="60"></td>
+           <td id="51">5</td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td> 
+           <td id="56"></td><td id="57"></td><td id="58"></td><td id="59"></td><td id="60"></td><td id="305"></td>
          </tr>
          <tr>
-           <td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td> 
-           <td id="66"></td><td id="67"></td><td id="68"></td><td id="69"></td><td id="70"></td>
+           <td id="61">6</td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td> 
+           <td id="66"></td><td id="67"></td><td id="68"></td><td id="69"></td><td id="70"></td><td id="306"></td>
          </tr>
          <tr>
-           <td id="71"></td><td id="72"></td><td id="73"></td><td id="74"></td><td id="75"></td> 
-           <td id="76"></td><td id="77"></td><td id="78"></td><td id="79"></td><td id="80"></td>
+           <td id="71">7</td><td id="72"></td><td id="73"></td><td id="74"></td><td id="75"></td> 
+           <td id="76"></td><td id="77"></td><td id="78"></td><td id="79"></td><td id="80"></td><td id="307"></td>
          </tr>
          <tr>
-           <td id="81"></td><td id="82"></td><td id="83"></td><td id="84"></td><td id="85"></td> 
-           <td id="86"></td><td id="87"></td><td id="88"></td><td id="89"></td><td id="90"></td>
+           <td id="81">8</td><td id="82"></td><td id="83"></td><td id="84"></td><td id="85"></td> 
+           <td id="86"></td><td id="87"></td><td id="88"></td><td id="89"></td><td id="90"></td><td id="308"></td>
          </tr>
          <tr>
-           <td id="91"></td><td id="92"></td><td id="93"></td><td id="94"></td><td id="95"></td> 
-           <td id="96"></td><td id="97"></td><td id="98"></td><td id="99"></td><td id="100"></td>
+           <td id="91">9</td><td id="92"></td><td id="93"></td><td id="94"></td><td id="95"></td> 
+           <td id="96"></td><td id="97"></td><td id="98"></td><td id="99"></td><td id="100"></td><td id="309"></td>
+         </tr>
+         <tr>
+           <td id="101">10</td><td id="102"></td><td id="103"></td><td id="104"></td><td id="105"></td> 
+           <td id="106"></td><td id="107"></td><td id="108"></td><td id="109"></td><td id="110"></td><td id="310"></td>
          </tr>
        </table>
+     <!-- <table id="2">
+         <tr>
+           <td id="101"></td><td id="102"></td><td id="103"></td><td id="104"></td><td id="105"></td> 
+           <td id="106"></td><td id="107"></td><td id="108"></td><td id="109"></td><td id="110"></td>
+         </tr>
+         <tr>
+           <td id="111"></td><td id="112"></td><td id="113"></td><td id="114"></td><td id="115"></td> 
+           <td id="116"></td><td id="117"></td><td id="118"></td><td id="119"></td><td id="120"></td>
+         </tr>
+         <tr>
+           <td id="121"></td><td id="122"></td><td id="123"></td><td id="124"></td><td id="125"></td> 
+           <td id="126"></td><td id="127"></td><td id="128"></td><td id="129"></td><td id="130"></td>
+         </tr>
+         <tr>
+           <td id="131"></td><td id="132"></td><td id="133"></td><td id="134"></td><td id="135"></td> 
+           <td id="136"></td><td id="137"></td><td id="138"></td><td id="139"></td><td id="140"></td>
+         </tr>
+         <tr>
+           <td id="141"></td><td id="142"></td><td id="143"></td><td id="144"></td><td id="145"></td> 
+           <td id="146"></td><td id="147"></td><td id="148"></td><td id="149"></td><td id="150"></td>
+         </tr>
+         <tr>
+           <td id="151"></td><td id="152"></td><td id="153"></td><td id="154"></td><td id="155"></td> 
+           <td id="156"></td><td id="157"></td><td id="158"></td><td id="159"></td><td id="160"></td>
+         </tr>
+         <tr>
+           <td id="161"></td><td id="162"></td><td id="163"></td><td id="164"></td><td id="165"></td> 
+           <td id="166"></td><td id="167"></td><td id="168"></td><td id="169"></td><td id="170"></td>
+         </tr>
+         <tr>
+           <td id="171"></td><td id="172"></td><td id="173"></td><td id="174"></td><td id="175"></td> 
+           <td id="176"></td><td id="177"></td><td id="178"></td><td id="179"></td><td id="180"></td>
+         </tr>
+         <tr>
+           <td id="181"></td><td id="182"></td><td id="183"></td><td id="184"></td><td id="185"></td> 
+           <td id="186"></td><td id="187"></td><td id="188"></td><td id="189"></td><td id="190"></td>
+         </tr>
+         <tr>
+           <td id="191"></td><td id="192"></td><td id="193"></td><td id="194"></td><td id="195"></td> 
+           <td id="196"></td><td id="197"></td><td id="198"></td><td id="199"></td><td id="200"></td>
+         </tr>
+       </table> -->
        <form>
          <input type="text" id="guessInput" placeholder="A0">
          <input type="button" id="fireButton" value="Fire!">
