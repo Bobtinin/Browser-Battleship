@@ -1,6 +1,6 @@
 var model = {    
     boardSize: 10,
-    numShips: 3,
+    numShips: 4,
     shipLength: 3,
     shipsSunk: 0,
 
