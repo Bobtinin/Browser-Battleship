@@ -128,7 +128,7 @@ var controller = {
 }
 
 function parseGuess(guess) {
-    var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
     if (guess === null || guess.length !== 2) {
         alert("Oops, please enter a letter and a number on the board.");
