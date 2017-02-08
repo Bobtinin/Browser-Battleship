@@ -3,105 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title>Battleship</title>
-    <style>
-      body {
-        background-color: #FFFFFF;
-      }
-
-      div#board {
-        position: relative;
-        width: 1024px;
-        height: 863px;
-        margin: auto;
-       /* background: url("board.jpg") no-repeat;*/
-      }
-      div#messageArea {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        color: rgb(83, 175, 19);
-      }
-      .hit {
-        background: url("ship.png") no-repeat center center;
-      }
-      .miss {
-        background: url("miss.png") no-repeat center center;
-      }
-      form {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        padding: 15px;
-        background-color: rgb(83, 175, 19);
-      }
-      form input {
-        background-color: #98CF71;
-        border-color: rgb(83, 175, 19);
-        font-size: 1em;
-      }
-      table#1 {
-        border-spacing: 0px;
-        position: absolute;
-        left: 173px;
-        top: 98px;
-      }
-      td {
-        width: 50px;
-        height: 50px;
-        border: 1px solid #000000;
-      }
-      table tr:first-child td, table tr td:first-child {
-        border: 0px solid white;
-      }
-  </style>
+    <link rel="stylesheet" href="battleship.css">
   </head>
   <body>
     <div id="board">
-       <div id="messageArea"/>
-       <table id="1">
-         <tr>
-           <td id="01"></td><td id="02">1</td><td id="03">2</td><td id="04">3</td><td id="05">4</td> 
-           <td id="06">5</td><td id="07">6</td><td id="08">7</td><td id="09">8</td><td id="10">9</td><td id="300">10</td>
+       <div id="messageArea"></div>
+       <table>
+	     <tr id="letters">
+           <td></td><td>A</td><td>B</td><td>C</td><td>D</td>
+		   <td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td>
          </tr>
          <tr>
-           <td id="11">A</td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td> 
-           <td id="16"></td><td id="17"></td><td id="18"></td><td id="19"></td><td id="20"></td><td id="301"></td>
+           <td id="a">1</td><td id="00"></td><td id="01"></td><td id="02"></td><td id="03"><td id="04"></td><td id="05">
+		   <td id="06"></td> <td id="07"></td><td id="08"><td id="09">
          </tr>
          <tr>
-           <td id="21">B</td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td> 
-           <td id="26"></td><td id="27"></td><td id="28"></td><td id="29"></td><td id="30"></td><td id="302"></td>
+           <td id="b">2</td><td id="10"></td><td id="11"></td><td id="12"></td><td id="13"><td id="14"></td><td id="15">
+		   <td id="16"></td> <td id="17"></td><td id="18"><td id="19">
          </tr>
          <tr>
-           <td id="31">C</td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td>
-           <td id="36"></td><td id="37"></td><td id="38"></td><td id="39"></td><td id="40"></td><td id="303"></td>
+           <td id="c">3</td><td id="20"></td><td id="21"></td><td id="22"></td><td id="23"><td id="24"></td><td id="25">
+		   <td id="26"></td> <td id="27"></td><td id="28"><td id="29">
          </tr>
          <tr>
-           <td id="41">D</td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td> 
-           <td id="46"></td><td id="47"></td><td id="48"></td><td id="49"></td><td id="50"></td><td id="304"></td>
+           <td id="d">4</td><td id="30"></td><td id="31"></td><td id="32"></td><td id="33"><td id="34"></td><td id="35">
+		   <td id="36"></td> <td id="37"></td><td id="38"><td id="39">
          </tr>
          <tr>
-           <td id="51">E</td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td> 
-           <td id="56"></td><td id="57"></td><td id="58"></td><td id="59"></td><td id="60"></td><td id="305"></td>
+           <td id="e">5</td><td id="40"></td><td id="41"></td><td id="42"></td><td id="43"><td id="44"></td><td id="45">
+		   <td id="46"></td> <td id="47"></td><td id="48"><td id="49">
          </tr>
          <tr>
-           <td id="61">F</td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td> 
-           <td id="66"></td><td id="67"></td><td id="68"></td><td id="69"></td><td id="70"></td><td id="306"></td>
+           <td id="f">6</td><td id="50"></td><td id="51"></td><td id="52"></td><td id="53"><td id="54"></td><td id="55">
+		   <td id="56"></td> <td id="57"></td><td id="58"><td id="59">
          </tr>
          <tr>
-           <td id="71">G</td><td id="72"></td><td id="73"></td><td id="74"></td><td id="75"></td> 
-           <td id="76"></td><td id="77"></td><td id="78"></td><td id="79"></td><td id="80"></td><td id="307"></td>
+           <td id="g">7</td><td id="60"></td><td id="61"></td><td id="62"></td><td id="63"><td id="64"></td><td id="65">
+		   <td id="66"></td> <td id="67"></td><td id="68"><td id="69">
          </tr>
-         <tr>
-           <td id="81">H</td><td id="82"></td><td id="83"></td><td id="84"></td><td id="85"></td> 
-           <td id="86"></td><td id="87"></td><td id="88"></td><td id="89"></td><td id="90"></td><td id="308"></td>
+		 <tr>
+           <td id="h">8</td><td id="70"></td><td id="71"></td><td id="72"></td><td id="73"><td id="74"></td><td id="75">
+		   <td id="76"></td> <td id="77"></td><td id="78"><td id="79">
          </tr>
-         <tr>
-           <td id="91">I</td><td id="92"></td><td id="93"></td><td id="94"></td><td id="95"></td> 
-           <td id="96"></td><td id="97"></td><td id="98"></td><td id="99"></td><td id="100"></td><td id="309"></td>
+		 <tr>
+           <td id="i">9</td><td id="80"></td><td id="81"></td><td id="82"></td><td id="83"><td id="84"></td><td id="85">
+		   <td id="86"></td> <td id="87"></td><td id="88"><td id="89">
          </tr>
-         <tr>
-           <td id="101">J</td><td id="102"></td><td id="103"></td><td id="104"></td><td id="105"></td> 
-           <td id="106"></td><td id="107"></td><td id="108"></td><td id="109"></td><td id="110"></td><td id="310"></td>
+		 <tr>
+           <td id="j">10</td><td id="90"></td><td id="91"></td><td id="92"></td><td id="93"><td id="94"></td><td id="95">
+		   <td id="96"></td> <td id="97"></td><td id="98"><td id="99">
          </tr>
        </table>
        <form>

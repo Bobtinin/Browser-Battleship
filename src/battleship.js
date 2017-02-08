@@ -1,6 +1,6 @@
 var model = {    
-    boardSize: 10,
-    numShips: 4,
+    boardSize: 7,
+    numShips: 3,
     shipLength: 3,
     shipsSunk: 0,
 
@@ -128,7 +128,7 @@ var controller = {
 }
 
 function parseGuess(guess) {
-    var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
     if (guess === null || guess.length !== 2) {
         alert("Oops, please enter a letter and a number on the board.");
